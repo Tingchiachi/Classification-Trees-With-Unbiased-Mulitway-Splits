@@ -31,10 +31,7 @@ note
    Let $\alpha$ be a significance level.Suppose $X_1,X_2,\dots,X_k$ are numerical and $X_{k+1},X_{k+2},\dots,X_K$ are categorical.
    1. Carry out an ANOVA analysis on each numerical variable and compute its p-values.Suppose $X_{k_1}$ has the smallest p-value $\hat{\alpha_1}$.
    2. For each categorical variable,form a contingency table and find its $\chi^2$ p-values.Suppose $X_{k_2}$ has the smallest p-value $\hat{\alpha_2}$.
-   3. Define $k'=\begin{cases}
-    k_1, & \hat{\alpha_1}\leq\hat{\alpha_2}\\
-    k_2, & \hat{\alpha_1}>\hat{\alpha_2}
-   \end{cases}$
+   3. Define $$k'=\begin{cases}k_1, & \hat{\alpha_1}\leq\hat{\alpha_2}\\k_2, & \hat{\alpha_1}>\hat{\alpha_2}\end{cases}$$
    4. If $\min(\hat{\alpha_1},\hat{\alpha_2})<\alpha/K$,choose $X_{k'}$ as the split variable.
    5. Otherwise,find the p-values for Levene's F test for each numerical variable.Suppose $X_{k''}$ has the smallest p-value $\tilde{\alpha}$.  
     (a) If $\tilde{\alpha}<\alpha/(K+K_1)$,choose $X_{k''}$.  
